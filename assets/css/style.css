@@ -495,6 +495,15 @@ p {
   color: #313450;
 }
 
+.sticky .navbar-brand img {
+  filter: none;
+}
+
+.sticky .navbar-brand span {
+  color: var(--primary-color);
+  text-shadow: none;
+}
+
 .sticky .navbar-toggler .toggler-icon {
   background-color:#ed8c2b;
 }
@@ -508,15 +517,25 @@ p {
 
 .navbar-brand {
   padding: 0;
+  display: flex;
+  align-items: center;
+  max-width: 200px;
 }
 
-.navbar-brand {
-  max-width: 150px;
-  font-size: 28px;
+.navbar-brand img {
+  height: 45px;
+  width: auto;
+  margin-right: 12px;
+  filter: brightness(0) invert(1);
+}
+
+.navbar-brand span {
+  font-size: 26px;
   font-family: "Poppins", sans-serif;
   font-weight: 800;
-  color: var(--primary-color);
+  color: #fff;
   letter-spacing: -0.5px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .navbar-toggler {
@@ -605,11 +624,12 @@ p {
 }
 
 .navbar-nav .nav-item a {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   color: #fff;
   transition: all 0.3s ease-out 0s;
   position: relative;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
