@@ -1456,6 +1456,18 @@ img.loading {
   border-radius: 3px;
 }
 
+/* Fix for section title paragraphs */
+.section_title p {
+  text-decoration: none !important;
+  position: relative;
+  z-index: 1;
+}
+
+.section_title p::after,
+.section_title p::before {
+  display: none !important;
+}
+
 /* Animated gradient backgrounds */
 @keyframes gradientShift {
   0%, 100% { background-position: 0% 50%; }
