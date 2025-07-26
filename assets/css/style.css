@@ -1494,7 +1494,41 @@ img.loading {
   height: 0 !important;
 }
 
-/* Clean up - no longer needed with color swap */
+/* Specific fix for "Let's take your logistics fleet to the next level" text */
+.contact_form .section_title p {
+  position: relative !important;
+  text-decoration: none !important;
+  background: none !important;
+  border: none !important;
+}
+
+.contact_form .section_title p::after,
+.contact_form .section_title p::before {
+  display: none !important;
+  content: none !important;
+  background: none !important;
+  border: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  position: absolute !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+/* Ultra-specific fix - target the exact div structure */
+.col-lg-6 .contact_form .section_title p,
+#contact .contact_form .section_title p {
+  text-decoration: none !important;
+}
+
+.col-lg-6 .contact_form .section_title p::after,
+.col-lg-6 .contact_form .section_title p::before,
+#contact .contact_form .section_title p::after,
+#contact .contact_form .section_title p::before {
+  display: none !important;
+  content: "" !important;
+  background: transparent !important;
+}
 
 /* Animated gradient backgrounds */
 @keyframes gradientShift {
