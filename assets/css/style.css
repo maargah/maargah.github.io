@@ -1469,18 +1469,43 @@ img.loading {
   display: none !important;
 }
 
-/* Specifically fix contact section text */
+/* Specifically fix contact section text - AGGRESSIVE FIX */
 .contact_area .section_title p,
-.contact_area p {
+.contact_area p,
+.contact_form .section_title p {
   text-decoration: none !important;
+  background: none !important;
+  border: none !important;
+  position: relative !important;
+  overflow: visible !important;
 }
 
 .contact_area .section_title p::after,
 .contact_area .section_title p::before,
 .contact_area p::after,
-.contact_area p::before {
+.contact_area p::before,
+.contact_form .section_title p::after,
+.contact_form .section_title p::before {
   display: none !important;
   content: none !important;
+  background: none !important;
+  border: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+/* Nuclear option - remove all pseudo-elements that could use secondary color */
+p::after,
+p::before {
+  background: none !important;
+  display: none !important;
+}
+
+/* Only allow specific elements to have secondary color pseudo-elements */
+.navbar-area .navbar-nav .nav-item a::after,
+.section_title .title::after,
+.single_services::before {
+  display: block !important;
 }
 
 /* Animated gradient backgrounds */
