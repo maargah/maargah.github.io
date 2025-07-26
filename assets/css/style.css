@@ -1515,6 +1515,16 @@ img.loading {
   transform: translateY(-2px);
 }
 
+/* Terms and Privacy pages navbar fix */
+.terms_area, .privacy_area {
+  padding-top: 140px;
+}
+
+/* Static navbar for inner pages */
+.header:not(.header_slider) + section {
+  padding-top: 120px;
+}
+
 /* Navbar enhancements for mobile */
 @media (max-width: 991px) {
   .navbar {
