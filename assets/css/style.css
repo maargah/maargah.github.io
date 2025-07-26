@@ -7,8 +7,8 @@
 
 :root {
   --primary-color: #1A3154;
-  --secondary-color: #FFB316;
-  --accent-color: #ed8c2b;
+  --secondary-color: #ed8c2b;
+  --accent-color: #FFB316;
   --text-color: #4a5568;
   --light-gray: #f7fafc;
   --border-color: #e2e8f0;
@@ -1494,19 +1494,7 @@ img.loading {
   height: 0 !important;
 }
 
-/* Nuclear option - remove all pseudo-elements that could use secondary color */
-p::after,
-p::before {
-  background: none !important;
-  display: none !important;
-}
-
-/* Only allow specific elements to have secondary color pseudo-elements */
-.navbar-area .navbar-nav .nav-item a::after,
-.section_title .title::after,
-.single_services::before {
-  display: block !important;
-}
+/* Clean up - no longer needed with color swap */
 
 /* Animated gradient backgrounds */
 @keyframes gradientShift {
