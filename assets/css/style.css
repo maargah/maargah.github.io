@@ -1494,8 +1494,14 @@ img.loading {
   height: 0 !important;
 }
 
-/* Specific fix for "Let's take your logistics fleet to the next level" text */
+/* Fix: Add spacing between title and paragraph to prevent visual overlap */
+.contact_form .section_title h4.title {
+  margin-bottom: 25px !important;
+}
+
 .contact_form .section_title p {
+  margin-top: 25px !important;
+  padding-top: 15px !important;
   position: relative !important;
   text-decoration: none !important;
   background: none !important;
