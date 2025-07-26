@@ -1272,7 +1272,8 @@ a {
   position: relative;
 }
 
-.navbar-nav .nav-item a::after {
+/* Only apply underline to actual navbar links, not other elements */
+.navbar-area .navbar-nav .nav-item a::after {
   content: '';
   position: absolute;
   bottom: -5px;
@@ -1283,8 +1284,8 @@ a {
   transition: width 0.3s ease;
 }
 
-.navbar-nav .nav-item a:hover::after,
-.navbar-nav .nav-item.active a::after {
+.navbar-area .navbar-nav .nav-item a:hover::after,
+.navbar-area .navbar-nav .nav-item.active a::after {
   width: 100%;
 }
 
@@ -1466,6 +1467,20 @@ img.loading {
 .section_title p::after,
 .section_title p::before {
   display: none !important;
+}
+
+/* Specifically fix contact section text */
+.contact_area .section_title p,
+.contact_area p {
+  text-decoration: none !important;
+}
+
+.contact_area .section_title p::after,
+.contact_area .section_title p::before,
+.contact_area p::after,
+.contact_area p::before {
+  display: none !important;
+  content: none !important;
 }
 
 /* Animated gradient backgrounds */
