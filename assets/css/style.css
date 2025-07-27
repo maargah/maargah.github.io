@@ -1158,9 +1158,16 @@ p.form-message.success, p.form-message.error {
     height: 100%;
     z-index: -1; }
 .footer_about img{
-  max-width: 70%;}
+  max-width: 70%;
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
 .footer_about p {
-  color: #fff; }
+  color: #fff;
+  margin-top: 10px; }
 
 .footer_title {
   font-size: 30px;
