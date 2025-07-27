@@ -15,23 +15,29 @@ $(function() {
         var header_navbar = document.querySelector(".navbar-area");
         var sticky = header_navbar.offsetTop;
         var logo = document.querySelector('.navbar-brand img')
+        
+        // Detect if we're in a subdirectory by checking the current path
+        var isSubdirectory = window.location.pathname.includes('/privacy-policy/') || window.location.pathname.includes('/terms-and-conditions/');
+        var logoPath = isSubdirectory ? '../assets/img/logo/' : 'assets/img/logo/';
     
         if (window.pageYOffset > sticky) {
             header_navbar.classList.add("sticky");
-            logo.src = 'assets/img/logo/logo-2.svg';
+            logo.src = logoPath + 'logo-2.svg';
         } else {
             header_navbar.classList.remove("sticky");
-            logo.src = 'assets/img/logo/logo.svg';
+            logo.src = logoPath + 'logo.svg';
         }
     
     
     
         // show or hide the back-top-top button
-        var backToTo = document.querySelector(".scroll-top");
-        if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-            backToTo.style.display = "flex";
-        } else {
-            backToTo.style.display = "none";
+        var backToTo = document.querySelector(".back-to-top");
+        if (backToTo) {
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                backToTo.style.display = "flex";
+            } else {
+                backToTo.style.display = "none";
+            }
         }
     };
     
