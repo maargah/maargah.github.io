@@ -1158,12 +1158,13 @@ p.form-message.success, p.form-message.error {
     height: 100%;
     z-index: -1; }
 .footer_about img{
-  max-width: 70%;
+  max-width: 150px;
   background: white;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  padding: 8px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
   margin-bottom: 20px;
+  display: inline-block;
 }
 .footer_about p {
   color: #fff;
