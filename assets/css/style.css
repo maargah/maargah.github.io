@@ -1211,22 +1211,25 @@ p.form-message.success, p.form-message.error {
   bottom: 30px;
   width: 50px;
   height: 50px;
-  line-height: 50px;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--secondary-color) 0%, var(--accent-color) 100%);
-  text-align: center;
   z-index: 99;
   -webkit-transition: all 0.3s ease-out 0s;
   -moz-transition: all 0.3s ease-out 0s;
   -ms-transition: all 0.3s ease-out 0s;
   -o-transition: all 0.3s ease-out 0s;
   transition: all 0.3s ease-out 0s;
+  box-shadow: 0 4px 15px rgba(255, 179, 22, 0.3);
+  /* Perfect centering with flexbox */
   display: none;
-  box-shadow: 0 4px 15px rgba(255, 179, 22, 0.3); }
+  align-items: center;
+  justify-content: center;
+  text-decoration: none; }
   .back-to-top:hover {
     color: #fff;
     transform: translateY(-5px);
-    box-shadow: 0 6px 20px rgba(255, 179, 22, 0.4); }
+    box-shadow: 0 6px 20px rgba(255, 179, 22, 0.4);
+    text-decoration: none; }
 
 /*===== ADDITIONAL ENHANCEMENTS =====*/
 
